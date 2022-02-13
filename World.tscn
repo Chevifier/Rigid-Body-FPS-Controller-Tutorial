@@ -1,0 +1,176 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://texture_08.png" type="Texture" id=1]
+[ext_resource path="res://RBPlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cannon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cube.tscn" type="PackedScene" id=4]
+[ext_resource path="res://spinner.tscn" type="PackedScene" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_albedo_tex_force_srgb = true
+albedo_texture = ExtResource( 1 )
+uv1_triplanar = true
+
+[node name="World" type="Spatial"]
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+material_override = SubResource( 1 )
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+width = 100.0
+height = 0.501542
+depth = 100.0
+
+[node name="CSGBox2" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.195488, 5.00518, -49.0765 )
+width = 100.0
+height = 10.0
+
+[node name="CSGBox3" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.195488, 5.00518, 48.9235 )
+width = 100.0
+height = 10.0
+
+[node name="CSGBox4" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48.8045, 5.00518, -0.0764711 )
+width = 100.0
+height = 10.0
+
+[node name="CSGBox5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -49.1955, 5.00518, -0.0764754 )
+width = 100.0
+height = 10.0
+
+[node name="CSGBox6" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1744, 2.16104, 9.21736 )
+height = 0.582614
+depth = 12.1958
+
+[node name="CSGBox7" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6632, 1.31962, 16.5009 )
+height = 1.92657
+depth = 2.15747
+
+[node name="CSGBox8" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.6632, 1.31962, 2.56676 )
+height = 1.92657
+depth = 2.15747
+
+[node name="CSGBox9" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4704, 2.08459, -7.49784 )
+width = 7.30201
+height = 3.69668
+depth = 9.59696
+
+[node name="CSGBox11" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4704, 1.01317, -0.348361 )
+width = 7.30201
+height = 1.62457
+depth = 5.36125
+
+[node name="CSGBox12" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4704, 1.01317, -2.37591 )
+width = 7.30201
+height = 3.85859
+depth = 3.21567
+
+[node name="CSGBox13" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4704, 3.75918, -18.4159 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox14" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0356, 3.75918, -18.4159 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox15" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25867, 3.75918, -18.4159 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox16" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98306, 4.50705, -18.4159 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox17" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98306, 4.50705, -14.5979 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox18" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70599, 5.36297, -14.5979 )
+width = 2.9137
+height = 0.562775
+depth = 2.33472
+
+[node name="CSGBox10" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 0.807825, -0.589422, 0, 0.589422, 0.807825, -7.6848, 1.18446, -7.49784 )
+width = 7.30201
+height = 3.69668
+depth = 9.59696
+
+[node name="CSGBox19" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 0.955067, -0.296392, 0, 0.296392, 0.955067, 1.15042, -0.553526, -8.77135 )
+width = 7.30201
+height = 3.69668
+depth = 9.59696
+
+[node name="CSGBox20" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 0.631651, -0.775253, 0, 0.775253, 0.631651, 8.38602, 1.18296, -8.77135 )
+width = 7.30201
+height = 3.69668
+depth = 9.59696
+
+[node name="Cannon" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9503, 0.33471, 0 )
+target_path = NodePath("../RBPlayer")
+
+[node name="Cube" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.23959, 1.32631, 7.56755 )
+
+[node name="Cube2" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1648, 1.32631, 7.56755 )
+
+[node name="Cube3" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00151, 1.32631, 7.56755 )
+
+[node name="Cube4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.20989, 3.41633, 7.56755 )
+
+[node name="Cube5" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06904, 3.41633, 7.56755 )
+
+[node name="Cube6" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.952, 5.47632, 7.56755 )
+
+[node name="Cube7" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.23959, 1.32631, 13.1902 )
+
+[node name="Cube8" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1648, 1.32631, 13.1902 )
+
+[node name="Cube9" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.00151, 1.32631, 13.1902 )
+
+[node name="Cube10" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.20989, 3.41633, 13.1902 )
+
+[node name="Cube11" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.06904, 3.41633, 13.1902 )
+
+[node name="Cube12" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.952, 5.47632, 13.1902 )
+
+[node name="spinner" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8567, 1.08424, 15.3966 )
+
+[node name="RBPlayer" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.61245, 21.2113 )

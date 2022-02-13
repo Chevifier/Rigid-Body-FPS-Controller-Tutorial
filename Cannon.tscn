@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Cannon.gd" type="Script" id=1]
+[ext_resource path="res://Projectile.tscn" type="PackedScene" id=2]
+
+[node name="Cannon" type="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33471, 0 )
+width = 4.67888
+height = 0.445836
+depth = 3.89372
+script = ExtResource( 1 )
+projectile = ExtResource( 2 )
+
+[node name="swivel" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.51098, 0 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="swivel"]
+transform = Transform( 2.0675e-10, 0.00472989, -0.999989, 1, -4.37114e-08, 0, -4.37109e-08, -0.999989, -0.00472989, -0.127977, -0.525632, -1.79488 )
+radius = 0.783
+height = 3.82233
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="swivel/CSGCylinder"]
+transform = Transform( 1, -7.45058e-09, 0, 7.45058e-09, 1, 0, 0, 0, 1, 0.0219593, 0.271505, 0 )
+operation = 2
+radius = 0.645701
+height = 3.55199
+
+[node name="spawn_point" type="Position3D" parent="swivel/CSGCylinder"]
+transform = Transform( 1, -7.10543e-15, -2.77556e-17, 7.10543e-15, 1, -9.31323e-10, 2.77556e-17, 9.31323e-10, 1, -1.19209e-07, 1.97001, 0.00931805 )
+
+[node name="CSGSphere" type="CSGSphere" parent="swivel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.566506, 0 )
+radius = 1.64758
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
